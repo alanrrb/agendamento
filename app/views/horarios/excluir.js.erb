@@ -1,0 +1,2 @@
+<% nome_da_div="dia_#{@horario.horario[0..1]}_#{@horario.dia}" %>
+$("#<%= nome_da_div %>").html("<%= j horario_livre(@horario.horario[0..1], @horario.dia) %>");

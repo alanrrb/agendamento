@@ -1,0 +1,28 @@
+
+<table role="grid">
+<thead>
+	<tr>
+		<th>Horário</th>
+		<th>Segunda</th>
+		<th>Terça</th>
+		<th>Quarta</th>
+		<th>Quinta</th>
+		<th>Sexta</th>
+	</tr>
+</thead>
+<tbody>
+	<% (6..23).each do |hora| %>
+	<tr>
+		<td><%= "#{format('%02d', hora)}:00" %>
+		
+		<% (2..6).each do |dia| %>
+			<td>
+			<div id="dia_<%= format('%02d', hora) %>_<%= dia %>">
+			<%= horario_do_dia(hora,dia) %>
+			</div>
+			</td>
+		<% end %>
+	</tr>
+	<% end %>
+</tbody>
+</table>
